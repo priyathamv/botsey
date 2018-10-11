@@ -3,7 +3,7 @@ const request 		= require('request');
 const schedule 		= require('node-schedule');
 
 const token 		= process.env.BOTSEY_TOKEN;
-const app 		= new Telegraf(token);
+const appplication 		= new Telegraf(token);
 const bitcoinURL 	= "https://www.zebapi.com/api/v1/market/ticker/btc/inr";
 const chatId		= "@bitcoin_value";
 
@@ -18,6 +18,6 @@ schedule.scheduleJob(rule, function() {
     });
 });
 
-app.hears('hi', (ctx) => ctx.reply("I dont do hi's brother! :D"));
+appplication.hears('hi', (ctx) => ctx.reply("I dont do hi's brother! :D"));
 
-app.startPolling();
+appplication.startPolling();
